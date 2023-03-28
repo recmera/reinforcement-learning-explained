@@ -2,7 +2,7 @@
 
 # Resumen
                                                                                                                                                                       
-<table style="font-size:8px">
+<table style="font-size:5px">
   <tr>
     <th>Algoritmo</th>
     <th>Resumen</th>
