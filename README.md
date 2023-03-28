@@ -49,6 +49,28 @@ Para aplicar SARSA, es necesario definir el espacio de estados y acciones, así 
 
 ## DQN (Deep Q-Network)
 
+DQN (Deep Q-Network) es un algoritmo de aprendizaje por refuerzo que utiliza redes neuronales profundas para aproximar la función de valor óptima en un problema de decisión secuencial Markoviano (MDP).
+
+Las principales características de DQN son las siguientes:
+
+- Utiliza una red neuronal profunda para aproximar la función de valor Q, que estima la recompensa acumulada esperada a largo plazo al tomar una acción en un estado dado.
+- Emplea una técnica llamada experiencia de repetición, que almacena y reutiliza transiciones pasadas para actualizar la red neuronal de manera más eficiente y reducir la correlación temporal de los datos de entrada.
+- Utiliza una política epsilon-greedy para equilibrar la exploración y la explotación durante el aprendizaje.
+
+DQN ha sido aplicado con éxito en una amplia variedad de tareas de aprendizaje por refuerzo, incluyendo juegos Atari, control de robots y tareas de procesamiento de lenguaje natural.
+
+Para aplicar DQN, es necesario seguir los siguientes pasos:
+
+1. Definir el entorno y las posibles acciones que puede realizar el agente.
+2. Crear una red neuronal profunda que tome como entrada el estado actual y genere como salida los valores Q para cada acción posible.
+3. Inicializar los pesos de la red neuronal aleatoriamente.
+4. Establecer los parámetros del algoritmo, como la tasa de aprendizaje y el factor de descuento.
+5. Interactuar con el entorno utilizando la política epsilon-greedy, almacenando cada transición en una memoria de repetición.
+6. Muestrear una muestra aleatoria de transiciones de la memoria de repetición para actualizar la red neuronal utilizando el algoritmo de retropropagación.
+7. Actualizar la política epsilon-greedy para reducir la tasa de exploración a medida que el agente adquiere más conocimientos sobre el entorno.
+
+En resumen, DQN es un algoritmo de aprendizaje por refuerzo que utiliza redes neuronales profundas para aproximar la función de valor óptima en un problema de decisión secuencial Markoviano. Su principal aplicación es en tareas de aprendizaje por refuerzo que involucran la toma de decisiones en entornos complejos y dinámicos, como los juegos Atari y el control de robots.
+
 ## Double DQN
 
 ## Dueling DQN
