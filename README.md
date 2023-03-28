@@ -9,11 +9,11 @@
     <th>Principal Característica</th>
     <th>Ventajas</th>
     <th>Desventajas</th>
-    <th>Qué lo diferencia de los otros algoritmos</th>
+    <th>Qué lo diferencia</th>
   </tr>
   <tr>
     <td>Q-Learning</td>
-    <td>Algoritmo de aprendizaje por refuerzo que aprende una función Q que evalúa el valor de una acción en un estado</td>
+    <td>Aprende una función Q que evalúa el valor de una acción en un estado</td>
     <td>Utiliza una tabla Q para almacenar y actualizar el valor de las acciones para cada estado.</td>
     <td>Fácil de implementar. Funciona bien en ambientes pequeños.</td>
     <td>No escala bien a ambientes grandes y continuos. Requiere que se explore todo el espacio de acciones y estados para garantizar la convergencia. No funciona en ambientes estocásticos o parcialmente observables.</td>
@@ -21,7 +21,7 @@
   </tr>
   <tr>
     <td>SARSA</td>
-    <td>Algoritmo de aprendizaje por refuerzo que aprende una política que maximiza la recompensa esperada</td>
+    <td>Aprende una política que maximiza la recompensa esperada</td>
     <td>Actualiza su valor Q en función de la política actual y utiliza la política actualizada para seleccionar la próxima acción.</td>
     <td>Escala mejor que Q-Learning. Puede manejar ambientes estocásticos y parcialmente observables.</td>
     <td>No siempre converge a la política óptima.</td>
