@@ -126,6 +126,30 @@ En resumen, Dueling DQN es una variante del algoritmo DQN que se enfoca en la re
 
 ## REINFORCE
 
+REINFORCE es un algoritmo de aprendizaje por refuerzo basado en la política que se utiliza para aprender una política estocástica para maximizar la recompensa acumulada. A diferencia de los algoritmos de valor, como Q-Learning, que aprenden una función de valor para cada estado o acción, REINFORCE aprende directamente la política que mapea los estados a una distribución de probabilidad sobre las acciones.
+
+Las principales características de REINFORCE son las siguientes:
+
+- Aprende directamente la política que mapea los estados a una distribución de probabilidad sobre las acciones.
+- Utiliza el teorema de gradiente de políticas para actualizar los pesos de la red neuronal de forma que se maximice la recompensa acumulada.
+- Es un algoritmo sin modelo, es decir, no requiere un modelo del entorno para aprender la política.
+- Puede manejar espacios de acción continuos y discretos.
+
+REINFORCE ha sido aplicado en una amplia variedad de tareas de aprendizaje por refuerzo, incluyendo robótica, juegos y procesamiento de lenguaje natural.
+
+Para aplicar REINFORCE, es necesario seguir los siguientes pasos:
+
+1. Definir el entorno y las posibles acciones que puede realizar el agente.
+2. Crear una red neuronal que mapee los estados a una distribución de probabilidad sobre las acciones.
+3. Inicializar los pesos de la red neuronal aleatoriamente.
+4. Establecer los parámetros del algoritmo, como la tasa de aprendizaje y el factor de descuento.
+5. Interactuar con el entorno utilizando la política aprendida, almacenando cada transición en una memoria de repetición.
+6. Calcular la función de recompensa acumulada para cada transición almacenada en la memoria de repetición.
+7. tilizar el teorema de gradiente de políticas para actualizar los pesos de la red neuronal de forma que se maximice la recompensa acumulada.
+8. Repetir los pasos 5 a 7 hasta que la política converja.
+
+En resumen, REINFORCE es un algoritmo de aprendizaje por refuerzo basado en la política que se utiliza para aprender una política estocástica para maximizar la recompensa acumulada. A diferencia de los algoritmos de valor, REINFORCE aprende directamente la política que mapea los estados a una distribución de probabilidad sobre las acciones. Su principal aplicación es en tareas de aprendizaje por refuerzo que involucran la toma de decisiones en entornos complejos y dinámicos, como la robótica y el procesamiento de lenguaje natural.
+
 ## Actor-Critic
 
 ## A2C (Advantage Actor-Critic)
