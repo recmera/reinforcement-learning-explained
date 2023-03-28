@@ -82,6 +82,7 @@ Las principales características de Double DQN son las siguientes:
 - Periodicamente se actualiza la red de selección de acciones utilizando los pesos de la red de estimación de valores Q.
 - Emplea una técnica llamada experiencia de repetición, que almacena y reutiliza transiciones pasadas para actualizar la red neuronal de manera más eficiente y reducir la correlación temporal de los datos de entrada.
 - Utiliza una política epsilon-greedy para equilibrar la exploración y la explotación durante el aprendizaje.
+- 
 Double DQN ha sido aplicado con éxito en una amplia variedad de tareas de aprendizaje por refuerzo, incluyendo juegos Atari y robótica.
 
 Para aplicar Double DQN, es necesario seguir los siguientes pasos:
