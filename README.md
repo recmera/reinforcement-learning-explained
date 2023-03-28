@@ -100,6 +100,30 @@ En resumen, Double DQN es una variante del algoritmo DQN que utiliza dos redes n
 
 ## Dueling DQN
 
+Dueling DQN (Dueling Deep Q-Network) es otra variante del algoritmo DQN que se enfoca en la representación del valor de estado. En lugar de tener una sola salida para el valor de estado, Dueling DQN divide la red en dos ramas: una para estimar el valor de estado y otra para estimar el valor de ventaja de cada acción. Luego, se combina la información de ambas ramas para calcular el valor Q de cada acción.
+
+Las principales características de Dueling DQN son las siguientes:
+
+- Divide la red en dos ramas para estimar el valor de estado y el valor de ventaja de cada acción.
+- Combina la información de ambas ramas para calcular el valor Q de cada acción.
+- Permite una mejor estimación de los valores Q en entornos donde la importancia de las diferentes acciones puede variar considerablemente en función del estado del entorno.
+- Utiliza una técnica llamada experiencia de repetición, que almacena y reutiliza transiciones pasadas para actualizar la red neuronal de manera más eficiente y reducir la correlación temporal de los datos de entrada.
+- Utiliza una política epsilon-greedy para equilibrar la exploración y la explotación durante el aprendizaje.
+
+Dueling DQN ha sido aplicado con éxito en una amplia variedad de tareas de aprendizaje por refuerzo, incluyendo juegos Atari y robótica.
+
+Para aplicar Dueling DQN, es necesario seguir los siguientes pasos:
+
+1. Definir el entorno y las posibles acciones que puede realizar el agente.
+2. Crear una red neuronal dividida en dos ramas: una para estimar el valor de estado y otra para estimar el valor de ventaja de cada acción.
+3. Inicializar los pesos de la red neuronal aleatoriamente.
+4. Establecer los parámetros del algoritmo, como la tasa de aprendizaje y el factor de descuento.
+5. Interactuar con el entorno utilizando la política epsilon-greedy, almacenando cada transición en una memoria de repetición.
+6. Muestrear una muestra aleatoria de transiciones de la memoria de repetición para actualizar la red neuronal utilizando el algoritmo de retropropagación.
+7. Actualizar la política epsilon-greedy para reducir la tasa de exploración a medida que el agente adquiere más conocimientos sobre el entorno.
+
+En resumen, Dueling DQN es una variante del algoritmo DQN que se enfoca en la representación del valor de estado y permite una mejor estimación de los valores Q en entornos donde la importancia de las diferentes acciones puede variar considerablemente en función del estado del entorno. Su principal aplicación es en tareas de aprendizaje por refuerzo que involucran la toma de decisiones en entornos complejos y dinámicos, como los juegos Atari y la robótica.
+
 ## REINFORCE
 
 ## Actor-Critic
