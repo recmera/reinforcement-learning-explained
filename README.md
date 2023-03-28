@@ -73,6 +73,30 @@ En resumen, DQN es un algoritmo de aprendizaje por refuerzo que utiliza redes ne
 
 ## Double DQN
 
+Double DQN (Double Deep Q-Network) es una variante del algoritmo DQN (Deep Q-Network) que tiene como objetivo solucionar el problema de sobreestimación de los valores Q que a veces ocurre en DQN. La idea principal de Double DQN es separar la selección de acciones de la estimación del valor Q, utilizando dos redes neuronales diferentes.
+
+Las principales características de Double DQN son las siguientes:
+
+- Utiliza dos redes neuronales: una para seleccionar las acciones y otra para estimar los valores Q.
+- La red de selección de acciones se utiliza para elegir la mejor acción posible, mientras que la red de estimación de valores Q se utiliza para calcular el valor Q de esa acción.
+- Periodicamente se actualiza la red de selección de acciones utilizando los pesos de la red de estimación de valores Q.
+- Emplea una técnica llamada experiencia de repetición, que almacena y reutiliza transiciones pasadas para actualizar la red neuronal de manera más eficiente y reducir la correlación temporal de los datos de entrada.
+- Utiliza una política epsilon-greedy para equilibrar la exploración y la explotación durante el aprendizaje.
+Double DQN ha sido aplicado con éxito en una amplia variedad de tareas de aprendizaje por refuerzo, incluyendo juegos Atari y robótica.
+
+Para aplicar Double DQN, es necesario seguir los siguientes pasos:
+
+1. Definir el entorno y las posibles acciones que puede realizar el agente.
+2. Crear dos redes neuronales: una para seleccionar las acciones y otra para estimar los valores Q.
+3. Inicializar los pesos de ambas redes neuronales aleatoriamente.
+4. Establecer los parámetros del algoritmo, como la tasa de aprendizaje y el factor de descuento.
+5. Interactuar con el entorno utilizando la política epsilon-greedy, almacenando cada transición en una memoria de repetición.
+6. Muestrear una muestra aleatoria de transiciones de la memoria de repetición para actualizar la red de estimación de valores Q utilizando el algoritmo de retropropagación.
+7. Periodicamente actualizar la red de selección de acciones utilizando los pesos de la red de estimación de valores Q.
+8. Actualizar la política epsilon-greedy para reducir la tasa de exploración a medida que el agente adquiere más conocimientos sobre el entorno.
+
+En resumen, Double DQN es una variante del algoritmo DQN que utiliza dos redes neuronales para solucionar el problema de sobreestimación de los valores Q. Su principal aplicación es en tareas de aprendizaje por refuerzo que involucran la toma de decisiones en entornos complejos y dinámicos, como los juegos Atari y la robótica.
+
 ## Dueling DQN
 
 ## REINFORCE
