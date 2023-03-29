@@ -35,6 +35,54 @@
     <td>Puede ser propenso a la sobreestimación de valores Q. Requiere una gran cantidad de datos para aprender con precisión.</td>
     <td>Utiliza redes neuronales para aproximar la función Q, lo que permite manejar ambientes continuos y grandes. Utiliza la técnica de experiencia de repetición para mejorar la estabilidad del aprendizaje.</td>
   </tr>
+  <tr>
+    <td>Double DQN</td>
+  </tr>
+  <tr>
+    <td>Dueling DQN</td>
+  </tr>
+  <tr>
+    <td>REINFORCE</td>
+  </tr>
+  <tr>
+    <td>Actor-Critic</td>
+  </tr>
+  <tr>
+    <td>A2C</td>
+  </tr>
+  <tr>
+    <td>PPO</td>
+  </tr>
+  <tr>
+    <td>TRPO</td>
+  </tr>
+  <tr>
+    <td>ACKTR</td>
+  </tr>
+  <tr>
+    <td>DDPG</td>
+  </tr>
+  <tr>
+    <td>TD3</td>
+  </tr>
+  <tr>
+    <td>SAC</td>
+  </tr>
+  <tr>
+    <td>HER</td>
+  </tr>
+  <tr>
+    <td>Rainbow</td>
+  </tr>
+  <tr>
+    <td>C51</td>
+  </tr>
+  <tr>
+    <td>IQN</td>
+  </tr>
+  <tr>
+    <td>IMPALA</td>
+  </tr>
 </table>
                                                                                                                                                                       
 ## Q-Learning
