@@ -67,21 +67,51 @@
   </tr>
   <tr>
     <td>SAC</td>
+    <td>Algoritmo de aprendizaje por refuerzo que utiliza una función de distribución de probabilidad suave para aprender políticas estocásticas y un crítico para aprender una función de valor.</td>
+    <td>Permite el aprendizaje de políticas estocásticas mediante el uso de una función de distribución de probabilidad suave, y utiliza un crítico para aprender una función de valor.</td>
+    <td>Logra un buen rendimiento en tareas de control continuo, es fácil de implementar y sintonizar, y es resistente a la inicialización de parámetros.</td>
+    <td>No es el mejor algoritmo para tareas de toma de decisiones en entornos discretos y con restricciones de tiempo.</td>
+    <td>Utiliza una función de distribución de probabilidad suave y un crítico para aprender políticas estocásticas y una función de valor, respectivamente.</td>
   </tr>
   <tr>
     <td>HER</td>
+    <td>Algoritmo de aprendizaje por refuerzo que utiliza retrospectiva para mejorar la eficiencia del aprendizaje y la capacidad de generalización.</td>
+    <td>Permite al agente aprender de experiencias fallidas al cambiar retroactivamente el objetivo deseado.</td>
+    <td>Aumenta la eficiencia del aprendizaje y la capacidad de generalización.</td>
+    <td>Solo es efectivo en entornos donde la definición de objetivos es clara y bien definida.</td>
+    <td>Utiliza retrospectiva para mejorar la eficiencia del aprendizaje y la capacidad de generalización del agente.</td>
   </tr>
   <tr>
     <td>Rainbow</td>
+    <td>Algoritmo de aprendizaje por refuerzo que combina seis mejoras a DQN, incluyendo el uso de dueling networks, doble Q-learning y PER.</td>
+    <td>Uso de varias mejoras para mejorar la estabilidad y eficiencia de DQN, incluyendo el uso de dueling networks, doble Q-learning y PER.</td>
+    <td>Mejora el rendimiento de DQN y aumenta la eficiencia del aprendizaje por refuerzo.</td>
+    <td>Requiere más recursos computacionales que DQN.</td>
+    <td>Combina múltiples mejoras a DQN para lograr un mejor rendimiento y una mayor eficiencia en el aprendizaje por refuerzo.</td>
   </tr>
   <tr>
     <td>C51</td>
+    <td>Algoritmo de aprendizaje por refuerzo basado en la distribución de probabilidad de retornos de recompensa. Utiliza una red neuronal profunda para aproximar la distribución de probabilidad de los retornos de recompensa.</td>
+    <td>Utiliza una distribución de probabilidad de retorno de recompensa para estimar la función Q.</td>
+    <td>Mejora la calidad de la estimación de la función Q. Logra un equilibrio entre exploración y explotación. Reduce la sobreestimación de los valores de la función Q. </td>
+    <td>Es computacionalmente intensivo en comparación con otros algoritmos. </td>
+    <td>El uso de una distribución de probabilidad de retorno de recompensa para estimar la función Q es una característica única y diferencial.</td>
   </tr>
   <tr>
     <td>IQN</td>
-  </tr>
+    <td>Algoritmo de aprendizaje por refuerzo que utiliza una red neuronal profunda para estimar la función Q. Emplea una técnica llamada "quantile regression" para estimar la distribución de probabilidad condicional del retorno de recompensa.</td>
+    <td>Utiliza la "quantile regression" para estimar la distribución de probabilidad condicional del retorno de recompensa. </td>
+    <td>Mejora la calidad de la estimación de la función Q. Logra un equilibrio entre exploración y explotación. Reduce la sobreestimación de los valores de la función Q.</td>
+    <td>Es computacionalmente intensivo en comparación con otros algoritmos.</td>
+    <td>La utilización de la "quantile regression" para estimar la distribución de probabilidad condicional del retorno de recompensa es una característica única y diferencial. </td>
+</tr>
   <tr>
     <td>IMPALA</td>
+    <td>Algoritmo de aprendizaje por refuerzo distribuido diseñado para entrenar redes neuronales profundas de manera escalable y eficiente. Decopla la política (actor) y la función de valor (learner) del agente de aprendizaje por refuerzo.</td>
+    <td>Escalabilidad y eficiencia en el entrenamiento de redes neuronales profundas de aprendizaje por refuerzo distribuido. Decopla la política y la función de valor del agente de aprendizaje por refuerzo. </td>
+    <td>Permite el entrenamiento de un gran número de actores en paralelo. Utiliza el almacenamiento en búfer de repetición y el muestreo centralizado de datos para actualizar los parámetros de la red neuronal. </td>
+    <td>Requiere una gran cantidad de recursos de cómputo y conocimientos técnicos para su implementación y ajuste.</td>
+    <td>La decopla de la política y la función de valor del agente de aprendizaje por refuerzo es su principal característica distintiva.</td>
   </tr>
 </table>
                                                                                                                                                                       
