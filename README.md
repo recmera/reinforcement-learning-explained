@@ -37,6 +37,13 @@
   </tr>
   <tr>
     <td>Double DQN</td>
+    <td>Double Deep Q-Network (DQN) es una mejora del algoritmo DQN original que utiliza dos redes neuronales en lugar de una para resolver el problema de sobreestimación de valores de Q.</td>
+    <td>Utiliza dos redes neuronales para reducir la sobreestimación de los valores de Q y mejorar la estabilidad del aprendizaje.</td>
+    <td>- Reduce la sobreestimación de los valores de Q, lo que puede mejorar la calidad del agente resultante. <br>
+        - Mejora la estabilidad del aprendizaje al reducir el riesgo de que la red de Q se ajuste en exceso a los datos de entrenamiento.</td>
+    <td>- Requiere más memoria y capacidad de procesamiento que DQN, ya que utiliza dos redes neuronales en lugar de una. <br>
+        - Aún puede experimentar problemas de sobreestimación de valores de Q en algunos casos.</td>
+    <td>Double DQN utiliza una técnica de aprendizaje por refuerzo llamada "maximización doble" para reducir la sobreestimación de los valores de Q. Esta técnica implica el uso de una red neuronal para determinar el mejor movimiento y otra red neuronal para estimar su valor, lo que reduce la sobreestimación y mejora la estabilidad del aprendizaje.</td>
   </tr>
   <tr>
     <td>Dueling DQN</td>
@@ -59,6 +66,29 @@
   </tr>
   <tr>
     <td>REINFORCE</td>
+    <td>Un algoritmo de aprendizaje por refuerzo que utiliza el método de gradiente de políticas para aprender una política óptima. Fue introducido por Ronald J. Williams en 1992.</td>
+    <td>Basado en gradiente de políticas</td>
+    <td>
+        <ul>
+            <li>Es un algoritmo simple y fácil de implementar.</li>
+            <li>Puede funcionar bien en problemas con un espacio de acción discreto y pequeño.</li>
+            <li>Es un algoritmo modelo-free, lo que significa que no necesita un modelo del entorno para aprender.</li>
+        </ul>
+    </td>
+    <td>
+        <ul>
+            <li>No es muy efectivo en problemas con un espacio de acción continuo o muy grande.</li>
+            <li>La estimación del gradiente puede ser inestable, especialmente en entornos con alta varianza.</li>
+            <li>Puede ser propenso a quedarse atascado en óptimos locales.</li>
+        </ul>
+    </td>
+    <td>
+        <ul>
+            <li>Es un algoritmo clásico y uno de los primeros en ser desarrollados en el campo del aprendizaje por refuerzo.</li>
+            <li>Es un buen punto de partida para comprender los fundamentos del aprendizaje por refuerzo.</li>
+            <li>Es uno de los pocos algoritmos que se puede utilizar para entrenar políticas estocásticas.</li>
+        </ul>
+    </td>
   </tr>
   <tr>
     <td>Actor-Critic</td>
