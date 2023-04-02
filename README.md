@@ -40,30 +40,81 @@
   </tr>
   <tr>
     <td>Dueling DQN</td>
+    <td>Dueling DQN es una variante del algoritmo DQN que introduce una arquitectura de red neuronal que separa la estimación del valor y la ventaja en la evaluación de los estados, lo que permite una mejor generalización y aprendizaje más eficiente en juegos con múltiples acciones.</td>
+    <td>Red neuronal con arquitectura dueling que separa la estimación del valor y la ventaja para mejorar el aprendizaje en juegos con múltiples acciones.</td>
+    <td>
+    <ul>
+    <li>Puede mejorar la eficiencia y estabilidad del aprendizaje en comparación con DQN estándar.</li>
+    <li>Puede ser utilizado en juegos con múltiples acciones y espacios de estado de alta dimensionalidad.</li>
+    <li>El uso de la arquitectura de red dueling permite una mejor generalización del valor de los estados.</li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li>El uso de la arquitectura de red dueling puede aumentar la complejidad computacional y de implementación en comparación con DQN estándar.</li>
+    <li>No tiene en cuenta la correlación temporal en los datos de entrenamiento, lo que puede hacer que el aprendizaje sea inestable.</li>
+    </ul>
+    </td>
+    <td>La arquitectura de red dueling separa la estimación del valor y la ventaja en la evaluación de los estados, lo que permite una mejor generalización y aprendizaje más eficiente en juegos con múltiples acciones.</td>
   </tr>
   <tr>
     <td>REINFORCE</td>
   </tr>
   <tr>
     <td>Actor-Critic</td>
+    <td>Un algoritmo de aprendizaje por refuerzo que combina un actor y un crítico en una red neuronal, donde el crítico evalúa la función de valor y el actor toma decisiones basadas en la función de valor y la política actual. Los gradientes se calculan utilizando la regla de la cadena.</td>
+    <td>Utiliza dos redes neuronales separadas para la política y la función de valor, lo que permite actualizaciones más eficientes.</td>
+    <td>Es efectivo en una amplia gama de entornos y puede manejar acciones continuas y discretas. También tiene un alto grado de flexibilidad y se puede ajustar para satisfacer una variedad de necesidades.</td>
+    <td>Puede ser sensible a los hiperparámetros y puede sufrir de problemas de estabilidad. También puede ser susceptible al sobreajuste.</td>
+    <td>La separación de la política y la función de valor permite actualizaciones más eficientes y una mejor estabilidad. Además, Actor-Critic es altamente flexible y puede ser ajustado para satisfacer una variedad de necesidades.</td>
   </tr>
   <tr>
-    <td>A2C</td>
+    <td>A2C (Advantage Actor-Critic)</td>
+    <td>Un algoritmo de aprendizaje por refuerzo que combina un actor y un crítico en una red neuronal, donde el crítico evalúa la función de valor y el actor toma decisiones basadas en la función de valor y la política actual. A2C utiliza gradientes de Monte Carlo para actualizar los pesos de la red.</td>
+    <td>Utiliza dos redes neuronales separadas para la política y la función de valor, lo que permite actualizaciones más eficientes.</td>
+    <td>Es fácil de implementar y escala bien en entornos de alta dimensionalidad. También es más eficiente en términos de uso de memoria que otros algoritmos similares, como A3C.</td>
+    <td>Puede sufrir de problemas de estabilidad y puede ser sensible a los hiperparámetros. También puede ser susceptible al sobreajuste.</td>
+    <td>La separación de la política y la función de valor permite actualizaciones más eficientes y una mejor estabilidad. Además, A2C es más fácil de implementar que otros algoritmos de actor-crítico.</td>
   </tr>
   <tr>
     <td>PPO</td>
+    <td>Un algoritmo de aprendizaje por refuerzo que utiliza un método de optimización de gradiente descendente para actualizar la política de un agente, mientras que limita las actualizaciones para evitar cambios muy grandes.</td>
+    <td>Proximidad de políticas, que limita la magnitud de las actualizaciones de política y mejora la estabilidad del aprendizaje.</td>
+    <td>Escalabilidad, estabilidad y facilidad de implementación.</td>
+    <td>Puede quedar atrapado en óptimos locales, y los hiperparámetros pueden ser difíciles de ajustar.</td>
+    <td>La política se actualiza de forma proximal para evitar cambios demasiado grandes y garantizar la estabilidad del aprendizaje.</td>
   </tr>
   <tr>
     <td>TRPO</td>
+    <td>Un algoritmo de aprendizaje por refuerzo que utiliza una región de confianza para limitar la magnitud de las actualizaciones de política, lo que garantiza la estabilidad del aprendizaje y mejora el rendimiento.</td>
+    <td>Limita la magnitud de las actualizaciones de política mediante una región de confianza.</td>
+    <td>Estabilidad y garantía de convergencia.</td>
+    <td>Puede ser lento debido a la necesidad de resolver un problema de optimización no lineal.</td>
+    <td>Utiliza una región de confianza para limitar la magnitud de las actualizaciones de política y garantizar la estabilidad del aprendizaje.</td>
   </tr>
   <tr>
     <td>ACKTR</td>
+    <td>Un algoritmo de aprendizaje por refuerzo que utiliza una combinación de gradiente conjugado y una matriz Kronecker para aproximar la matriz Hessiana de la función de valor, lo que acelera el aprendizaje y mejora el rendimiento.</td>
+    <td>Utiliza una matriz Kronecker para aproximar la matriz Hessiana de la función de valor, lo que acelera el aprendizaje y mejora el rendimiento.</td>
+    <td>Escalabilidad, velocidad de aprendizaje y garantía de convergencia.</td>
+    <td>Puede ser computacionalmente intensivo debido al uso de una matriz Kronecker.</td>
+    <td>Utiliza una matriz Kronecker para aproximar la matriz Hessiana de la función de valor, lo que acelera el aprendizaje y mejora el rendimiento.</td>
   </tr>
   <tr>
     <td>DDPG</td>
+    <td>Un algoritmo de aprendizaje por refuerzo profundo que puede ser usado para problemas de control continuo.</td>
+    <td>Utiliza una red neuronal para aproximar tanto la función de valor Q como la política determinista.</td>
+    <td>Estabilidad, mejor desempeño en problemas con espacios de acción continuos y políticas deterministas suaves.</td>
+    <td>Algunos problemas de convergencia, sensibilidad a hiperparámetros y mayor complejidad de entrenamiento que otros algoritmos.</td>
+    <td>Utiliza una red de política determinista y una red de valor crítico, actualiza la política usando una técnica de gradiente ascendente, y utiliza un buffer de repetición para mejorar la eficiencia de la exploración.</td>
   </tr>
   <tr>
     <td>TD3</td>
+    <td>Una extensión de DDPG que aborda algunos de sus problemas, como la sobreestimación de la función Q y la estabilidad.</td>
+    <td>Utiliza tres redes de valor crítico, dos para calcular la función Q y una para seleccionar el valor mínimo de las dos. También utiliza una política ruido ajustada y una técnica de "retraso" en la actualización de la función de valor.</td>
+    <td>Mayor estabilidad, mejor rendimiento en problemas de espacios de acción continuos y políticas deterministas suaves, menor sobreestimación de la función Q.</td>
+    <td>También puede sufrir de problemas de convergencia y ser sensible a los hiperparámetros.</td>
+    <td>Utiliza tres redes de valor crítico y una técnica de "retraso" para reducir la sobreestimación de la función Q y mejorar la estabilidad.</td>
   </tr>
   <tr>
     <td>SAC</td>
